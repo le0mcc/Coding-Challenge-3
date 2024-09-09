@@ -56,8 +56,3 @@ function findTopAndBottomPerformers () {
 let displayTopAndBottom = findTopAndBottomPerformers();
 console.log(`Top performer: ${displayTopAndBottom.topPerformer}`);
 console.log(`Bottom performer: ${displayTopAndBottom.bottomPerformer}`);
-
-// Task 4: Combine functions to generate a performance report
-function generatePerformanceReport () {
-    let 
-}
