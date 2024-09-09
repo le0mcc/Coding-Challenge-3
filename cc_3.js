@@ -22,10 +22,10 @@ function determinePerformanceRating (rating) {
             console.log("Good");
         }
         else if (averageSales >= 4000 && averageSales < 7000) {
-            console.log("Satisfactory")
+            console.log("Satisfactory");
         } 
         else {
-            console.log("Needs improvement");        
+            console.log("Needs improvement");       
     }
     return rating;
 }
@@ -34,14 +34,15 @@ function determinePerformanceRating (rating) {
 let displayRating = determinePerformanceRating(salesFigures);
 
 // Task 3: Create a function to identify top and bottom performers
-function findTopAndBottomPerformers () {
+function findTopAndBottomPerformers (total) {
     const salesData = [
         {"name" : "Alice", "sales" : [12000,15000,13000]}, 
-        {"name" : "Bob", "sales" : [7000,6000,7500]}
+        {"name" : "Bob", "sales" : [7000,6000,7500]},
+        {"name" : "Charlie", "sales" : [3000,4000,3500]},
+        {"name" : "Diana", "sales" : [9000,8500,9200]}
     ];
-    // the totals for each salesperson
     for (let index = 0; index < salesData.length; index++) {
-        salesData[index].totals = salesData[index].sales.reduce((total, sale) => total + sale, 0);
+        salesData[index].total = salesData[index].sales.reduce((total,sale) => total + sale,0);
     }
     salesData.sort((a,b) => a.totals - b.totals);
     // the data is sorted from lowest to highest, so the bottom is first(index of 0) and top is last
