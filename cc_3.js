@@ -34,13 +34,14 @@ function determinePerformanceRating (rating) {
 let displayRating = determinePerformanceRating(salesFigures);
 
 // Task 3: Create a function to identify top and bottom performers
-function findTopAndBottomPerformers (total) {
+function findTopAndBottomPerformers () {
     const salesData = [
         {"name" : "Alice", "sales" : [12000,15000,13000]}, 
         {"name" : "Bob", "sales" : [7000,6000,7500]},
         {"name" : "Charlie", "sales" : [3000,4000,3500]},
         {"name" : "Diana", "sales" : [9000,8500,9200]}
     ];
+    // calculate total with the reduce method
     for (let index = 0; index < salesData.length; index++) {
         salesData[index].total = salesData[index].sales.reduce((total,sale) => total + sale,0);
     }
@@ -56,3 +57,7 @@ let displayTopAndBottom = findTopAndBottomPerformers();
 console.log(`Top performer: ${displayTopAndBottom.topPerformer}`);
 console.log(`Bottom performer: ${displayTopAndBottom.bottomPerformer}`);
 
+// Task 4: Combine functions to generate a performance report
+function generatePerformanceReport () {
+    let 
+}
